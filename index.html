@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body,html{
+        margin: 0;padding: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(254,244,209);
+    }
+    .da{
+        height: 100%;
+        background:url('./素材/img/light.png') no-repeat 0 -80px;
+    }
+    .nei{
+        /* display: none; */
+        margin-top: 140px;
+        width: 100%;
+        /* border: 1px solid #000; */
+        overflow: hidden;
+        text-align: center;
+    }
+    .top{
+        width: 100%;
+        
+        
+    }
+    .ha{
+        animation: top 0.5s linear 0.5s  alternate-reverse forwards;
+    }
+    @keyframes top{
+        0%{
+            transform: rotate(0deg)
+        }
+        25%{
+            transform: rotate(30deg)
+        }
+        50%{
+            transform: rotate(-30deg)
+        }
+        75%{
+            transform: rotate(-30deg)
+        }
+        100%{
+            transform: rotate(30deg)
+        }
+    }
+    .botton{
+        width: 70%;
+    }
+    .nei p{
+        font-size: 20px;
+        color: coral;
+    }
+    .nei2{
+        font-size: 20px;
+        color: coral;
+        margin-top: 80px;
+        text-align: center;
+
+    }
+    .nei2 img{
+        margin-top:180px; 
+        width: 100%;
+    }
+    .box{
+
+    }
+    .box img{
+        width: 100%;
+        margin-top: -5px;
+        position: relative;
+        top:-290px;
+    }
+    .jiang{
+        width: 100%;
+        font-size: 40px;
+        position: absolute;
+        top:235px;
+        left: 80px;
+    }
+    .jiang span{
+        position:absolute;
+        top:28px;
+        color: red;
+    }
+    .xia {
+        display: none;
+    }
+    .ling{
+        width: 70%;
+        background-color: rgb(230, 138, 96);
+        font-size: 17px;
+        text-align: center;
+        line-height: 50px;
+        margin-top: -40px;
+        border-radius: 7px;
+    }
+    </style>
+</head>
+<body>
+    <div class="da">
+        <div class="nei">
+            <p>开心果给你发了一个宝箱</p>
+            
+            <img class="top" src="./素材/img/c.png" alt="">
+            <img class="botton" src="./素材/img/txt-tips-open.png" alt="">
+        </div>
+        <div class="xia">
+        <div class="nei2">
+            <p>恭喜你，成功领取开心果发的全民飞机大战宝箱</p>
+            <img src="./素材/img/chest-open-blur.png" alt="">
+            
+        </div>
+       
+            <div class="box">
+                <img src="./素材/img/open-bg-top.png" alt="">
+                <img src="./素材/img/open-bg-bottom.png" alt="">
+                
+            </div>
+            <div class="jiang">
+                <img src="./素材/img/chest-icon-zuan.png" alt=""> <span>X1000</span>
+                <div class="ling">
+                    <p>查看详情并提取</p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+<script src="./素材/js/touch-0.2.14.min.js"></script>
+<script src="./jquery-3.4.0.js"></script>
+<script>
+        var dian=document.getElementsByClassName('top')[0];
+        touch.on(dian,'touchstart',function(){
+            $(this).addClass('ha')
+            setTimeout(function(){
+                $('.nei').hide();
+                $('.xia').show()
+            },1500)
+        })
+
+</script>
+</html>
